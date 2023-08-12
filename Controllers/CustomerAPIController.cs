@@ -1,4 +1,6 @@
-﻿using FluentValidation;
+﻿using AutoMapper;
+using FluentValidation;
+using FluentValidationApp.Web.DTOs;
 using FluentValidationApp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,19 +13,22 @@ namespace FluentValidationApp.Web.Controllers
     public class CustomerAPIController : ControllerBase
     {
         private readonly AppDbContext _context;
-        private readonly IValidator<Customer> _customerValidator ;
+        private readonly IValidator<Customer> _customerValidator;
+        private readonly IMapper _mapper;
 
-        public CustomerAPIController(AppDbContext context, IValidator<Customer> customerValidator)
+        public CustomerAPIController(AppDbContext context, IValidator<Customer> customerValidator, IMapper mapper)
         {
-            _context = context; 
+            _context = context;
             _customerValidator = customerValidator;
+            _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Customer>>> GetCustomers()
+        public async Task<ActionResult<List<CustomerDTO>>> GetCustomers()
         {
-            return await _context.Customers.ToListAsync();
-             
+            List<Customer> customer = await _context.Customers.ToListAsync();
+            return _mapper.Map<List<CustomerDTO>>(customer);
+
         }
 
         [HttpPost]
