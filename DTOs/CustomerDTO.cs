@@ -9,8 +9,8 @@
 
         public string FullName { get; set; }
 
-        public string CreditCardNumber { get; set; }
+        public string Number { get; set; }
 
-        public DateTime CreditCardValidDate { get; set; }
+        public DateTime Valid { get; set; }
     }
 }
