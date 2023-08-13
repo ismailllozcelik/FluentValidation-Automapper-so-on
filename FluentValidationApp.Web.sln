@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidationApp.Web", "FluentValidationApp.Web.csproj", "{3016A1F9-ED1B-4F5F-927D-749E43166444}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationApp.Web", "FluentValidationApp.Web.csproj", "{3016A1F9-ED1B-4F5F-927D-749E43166444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateLimit.API", "..\RateLimit.API\RateLimit.API.csproj", "{81EA2ED5-9F3D-43E9-94D9-CECEC7CA59B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3016A1F9-ED1B-4F5F-927D-749E43166444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3016A1F9-ED1B-4F5F-927D-749E43166444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3016A1F9-ED1B-4F5F-927D-749E43166444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81EA2ED5-9F3D-43E9-94D9-CECEC7CA59B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81EA2ED5-9F3D-43E9-94D9-CECEC7CA59B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81EA2ED5-9F3D-43E9-94D9-CECEC7CA59B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81EA2ED5-9F3D-43E9-94D9-CECEC7CA59B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
